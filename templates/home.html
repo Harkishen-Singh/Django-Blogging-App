@@ -1,0 +1,17 @@
+<html>
+<body>
+  {% extends 'base.html' %}
+  {% block content %}
+  <h3>Home Page</h3>
+  <h4>List of the interface catches</h4>
+  <ol>
+  {% for books in object_list %}
+  <li><h4>Title : {{books.title}}</h4>
+      <h5>Author : {{books.author}}</h5>
+      <p><br/>{{books.body}}</p>
+  </li>
+  {% endfor %}
+</ol>
+  {% endblock %}
+</body>
+</html>
